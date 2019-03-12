@@ -1,0 +1,27 @@
+{
+      "macros" : [
+        "MBEDTLS_SHA1_C=1"
+    ],
+    "config": {
+        "main-stack-size": {
+            "value": 8192
+        },
+        "wifi-ssid": {
+            "help": "WiFi SSID",
+            "value": "\"CodeZoo_2.4GHz\""
+        },
+        "wifi-password": {
+            "help": "WiFi Password",
+            "value": "\"gamepark\""
+        }
+    },
+    "target_overrides": {
+        "*": {
+            "drivers.uart-serial-rxbuf-size": 8192,
+            "drivers.uart-serial-txbuf-size": 8192,
+            "platform.stdio-convert-newlines": true,
+            "platform.stdio-baud-rate": 115200,
+            "mbed-trace.enable": 16
+        }
+    }
+}
